@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Houses() {
   return (
-    <div>Houses</div>
+    <div className='houses'>Houses</div>
   )
 }
