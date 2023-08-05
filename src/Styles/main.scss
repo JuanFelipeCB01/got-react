@@ -1,3 +1,10 @@
 @import "reset";
 @import "var";
 @import "mixin";
+
+@import "../Pages/home/home";
+@import "../Pages/characters/characters";
+@import "../Pages/chronology/chronology";
+@import "../Pages/houses/houses";
+@import "../Components/footer";
+@import "../Components/nav";
