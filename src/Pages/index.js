@@ -1,5 +1,4 @@
-export {default as Characters} from "./Characters/Characters"
-export {default as Chronology} from "./Chronology/Chronology"
-export {default as Home} from "./Home/Home"
-export {default as Houses} from "./Houses/Houses"
-
+export { default as Characters } from "./characters/Characters";
+export { default as Chronology } from "./chronology/Chronology";
+export { default as Home } from "./home/Home.jsx";
+export { default as Houses } from "./houses/Houses";

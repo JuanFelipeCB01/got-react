@@ -1,5 +1,7 @@
-export default function Characters(){
-    return <div className="Characters">
-                <h1>I'm the Characters page</h1>
-            </div>
+import React from 'react'
+
+export default function Characters() {
+  return (
+    <div>Characters</div>
+  )
 }
