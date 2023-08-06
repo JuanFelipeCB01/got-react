@@ -26,7 +26,6 @@ export default function CharactersDetail() {
   useEffect(() => {
     getCharacterDetail();
   }, []);
-  console.log(houses)
   return (
     <ImgContext.Provider value={{houses}}>
     <div>

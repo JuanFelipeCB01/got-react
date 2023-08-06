@@ -1,4 +1,10 @@
-.houses{
+.housesGallery{
     background-color: black;
-    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    &-img{
+        width: 10px;
+    }
+}
+.housesGallery-box{
 }

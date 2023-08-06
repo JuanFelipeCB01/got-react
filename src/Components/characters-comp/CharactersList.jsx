@@ -27,7 +27,6 @@ useEffect(()=>{
             <div key={index} className="charactersList-gallery">
               <div className="charactersList-gallery-container">
               <Link to={`/characters/${char.id}`}> <h3 className="charactersList-gallery-container-h3"> {char.name}</h3></Link>
-              {console.log(char.image)}
               <img className="charactersList-gallery-container-img" src={`http://localhost:3005${char.image}`} alt={char.name} />
               </div>
             </div>
