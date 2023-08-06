@@ -1,0 +1,48 @@
+.galleryDetail {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  &-goBack {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 25px 156px;
+  }
+  &-div{
+      width: calc(150px + 1vw);
+      height: calc(200px + 1vw);
+      margin: auto;
+      overflow: hidden;
+      text-align: center;
+    &-img {
+              width: 100%;
+        height: 100%;
+        object-fit: cover;
+      padding: 20px 0px;
+      transition: 0.5s ease;
+
+    }
+    }
+  &-section {
+    font-family: "Courier New", Courier, monospace;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.galleryFooterInfo {
+  &-ul {
+    li {
+      font-family: "Times New Roman", Times, serif;
+    }
+  }
+}
+.houses {
+  width: calc(150px + 1vw);
+  height: calc(200px + 1vw);
+  overflow: hidden;
+  text-align: center;
+  &-image {
+    width: 150px;
+  }
+}
