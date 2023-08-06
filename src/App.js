@@ -8,15 +8,15 @@ function App() {
 const [homePage, setHomePage] = useState(false)
 
   return (
-    <div className="App">
+    <div className="app">
       <header>
         <Nav setHomePage={setHomePage} homePage={homePage} />
       </header>
-      <main>
+      <main >
         <Routers />
       </main>
       <footer className="footer">
-        <BottomBar  setHomePage={setHomePage} />
+        <BottomBar setHomePage={setHomePage} />
       </footer>
     </div>
   );
