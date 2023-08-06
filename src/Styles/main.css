@@ -48,9 +48,13 @@ a {
   height: 100vh;
 }
 
-.houses {
+.housesGallery {
   background-color: black;
-  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.housesGallery-img {
+  width: 10px;
 }
 
 .footer-bottom {
@@ -135,7 +139,7 @@ a {
 }
 .galleryDetail-div {
   width: calc(150px + 1vw);
-  height: calc(200px + 1vw);
+  height: calc(300px + 1vw);
   margin: auto;
   overflow: hidden;
   text-align: center;
