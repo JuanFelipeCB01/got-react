@@ -13,19 +13,15 @@ export default function Houses() {
       console.error("Error fetching house details:", error);
     }
   };
-
   useEffect(() => {
     getHouses();
   }, []);
-
-  console.log("housesList:", housesList);
-
   return (
     <div className="housesGallery">
       {
         housesList.map((house, index) => (
           <div className="housesGallery-box" key={index}>
-          <Link to={`/houses/${house.id}`}>
+          <Link to={`/houses/${house.name}`}>
             <img className="housesGallery-box-image" src={`http://localhost:3005${house.image}`} alt={house.name}/>
           </Link>
           <h3>{house.name}</h3>

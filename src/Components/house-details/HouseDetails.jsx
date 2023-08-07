@@ -7,13 +7,13 @@ import HGalleryDetails from './HGalleryDetails';
 
 export default function HouseDetails() {
 
-const { id } = useParams();
+const { name } = useParams();
 const [housesData, sethousesData] = useState();
   
 const getHouseDetails = async () => {
     try {
-    const houseDetail = await axios.get(`http://localhost:3005/houses/${id}`);
-    sethousesData(houseDetail.data);
+    const houseDetail = await axios.get(`http://localhost:3005/houses?name=${name}`);
+    sethousesData(houseDetail.data[0]);
     } catch (error) {
     console.error("Error fetching house details:", error);
     }
