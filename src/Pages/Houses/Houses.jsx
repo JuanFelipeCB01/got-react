@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { HousesGallery } from "../../Components";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Houses() {
   const [housesList, setHousesList] = useState([]);
@@ -25,7 +25,9 @@ export default function Houses() {
       {
         housesList.map((house, index) => (
           <div className="housesGallery-box" key={index}>
-              <img className="housesGallery-image" src={`http://localhost:3005${house.image}`} alt={house.name}/>
+          <Link to={`/houses/${house.id}`}>
+            <img className="housesGallery-box-image" src={`http://localhost:3005${house.image}`} alt={house.name}/>
+          </Link>
           <h3>{house.name}</h3>
           </div>
         ))
