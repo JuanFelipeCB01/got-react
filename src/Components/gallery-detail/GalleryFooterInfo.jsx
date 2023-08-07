@@ -3,12 +3,12 @@ import { ImgContext } from '../characters-detail-comp/CharactersDetail';
 
 export default function GalleryFooterInfo({footerInfo, ulTitle, imgInfo}) {
   const { houses } = useContext(ImgContext);
-  console.log(houses[0]?.image);
-  console.log(imgInfo);
+  // console.log(houses)
   return (
     <div className="galleryFooterInfo">
   
       <ul className="galleryFooterInfo-ul">
+
         {ulTitle}
         {footerInfo?.map((char, index) => (
           <>

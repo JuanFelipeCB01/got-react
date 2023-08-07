@@ -3,7 +3,7 @@ import GalleryFooterInfo from "./GalleryFooterInfo";
 import { Link } from "react-router-dom";
 
 export default function GalleryDetail({ characterInfo, houseInfo }) {
-  const [houseOf, setHouseOf] = useState();
+  // const [houseOf, setHouseOf] = useState();
 
 
   // const eachHouse = houseInfo.map((each) => each.name);

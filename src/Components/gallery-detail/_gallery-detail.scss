@@ -2,6 +2,7 @@
   text-align: center;
   width: 80%;
   margin: auto;
+
   &-goBack {
     position: absolute;
     left: 0px;
@@ -42,6 +43,7 @@
   height: calc(200px + 1vw);
   overflow: hidden;
   text-align: center;
+  
   &-image {
     width: 150px;
   }

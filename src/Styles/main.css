@@ -51,10 +51,16 @@ a {
 .housesGallery {
   background-color: black;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 15px;
+  padding: 19px 156px;
 }
-.housesGallery-img {
-  width: 10px;
+.housesGallery-box {
+  text-align: center;
+}
+.housesGallery-box-image {
+  width: 200px;
 }
 
 .footer-bottom {
