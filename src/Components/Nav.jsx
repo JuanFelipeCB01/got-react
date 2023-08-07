@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink} from 'react-router-dom'
+import { MyContext } from '../shared/MyContext';
 
 export default function Nav({setHomePage, homePage}) {
+  const {t, changeLanguage} = useContext(MyContext)
+
   return (
     <div className='nav'>
     {homePage &&
@@ -10,10 +13,10 @@ export default function Nav({setHomePage, homePage}) {
       </NavLink>
     }
       <NavLink className="nav-link">
-        <img className="nav-link-img" src="https://res.cloudinary.com/dxnzcewsy/image/upload/v1691237190/portfolio/spain_1_wpzpdp.png" alt="Spain-flag"/>
+        <img  onClick={() => changeLanguage("esp")} className="nav-link-img" src="https://res.cloudinary.com/dxnzcewsy/image/upload/v1691237190/portfolio/spain_1_wpzpdp.png" alt="Spain-flag"/>
       </NavLink>
       <NavLink className="nav-link">
-        <img className="nav-link-img" src="https://res.cloudinary.com/dxnzcewsy/image/upload/v1691237183/portfolio/united-kingdom_1_jkeaph.png" alt="England-flag" />
+        <img onClick={() => changeLanguage("eng")} className="nav-link-img" src="https://res.cloudinary.com/dxnzcewsy/image/upload/v1691237183/portfolio/united-kingdom_1_jkeaph.png" alt="England-flag" />
       </NavLink>
     </div>
   );
