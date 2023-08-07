@@ -4,4 +4,10 @@ export const eng = {
   characters: "characters",
   houses: "houses",
   chronology: "chronology",
+  aliances: "Aliances",
+  father: "Father",
+  pisodes: "Episodes",
+  siblings: "Siblings",
+  titles: "TItles",
+  unknown: "Unknown",
 };

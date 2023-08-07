@@ -10,7 +10,7 @@ export default function HGalleryDetails({houseInfo}) {
           <div className="galleryDetail-goBack">
             <Link to="/houses">{"<--- Volver"} </Link>
           </div>
-          <div className="galleryDetail-div">
+          <div className="galleryDetail-divHouse">
             <img className="galleryDetail-div-img" src={`http://localhost:3005${houseInfo?.image}`} alt=""/>
           </div>
           <h2 className="galleryDetail-h2">{houseInfo?.name}</h2>
