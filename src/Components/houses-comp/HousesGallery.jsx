@@ -3,7 +3,6 @@ import React, { useState } from "react";
 export default function HousesGallery({ listOfHouses }) {
     const [houses, sethouses] = useState(listOfHouses)
 
-    console.log(houses)
   return (
     <div>
       {/* {houses.map((house, index) => (

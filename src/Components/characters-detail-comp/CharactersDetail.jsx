@@ -9,13 +9,11 @@ export default function CharactersDetail() {
   const  {name}  = useParams();
   const [charactersData, setCharactersData] = useState();
   const [houses, setHouses] = useState([]);
-  console.log(charactersData)
   const getCharacterDetail = async () => {
     try {
       const characterDetail = await axios.get(`http://localhost:3005/characters?name=${name}`);
       setCharactersData(characterDetail.data[0]);
       if (characterDetail.data[0].house) {
-        console.log(characterDetail.data[0].house);
         const houseList = await axios.get(`http://localhost:3005/houses?name=${characterDetail.data[0].house}`);
         setHouses(houseList.data);
       }
