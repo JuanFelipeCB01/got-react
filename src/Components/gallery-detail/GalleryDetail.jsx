@@ -24,7 +24,6 @@ export default function GalleryDetail({ characterInfo, houseInfo }) {
         {characterInfo?.parents.length >0 ? <GalleryFooterInfo ulTitle={t("father")} footerInfo={characterInfo?.parents} /> : <GalleryFooterInfo ulTitle={t("father")} footerInfo={unknown}/>}
         {characterInfo?.siblings.length >0 ? <GalleryFooterInfo ulTitle={t("siblings")}  footerInfo={characterInfo?.siblings} /> : <GalleryFooterInfo ulTitle={t("siblings")} footerInfo={unknown}/>}
         <GalleryFooterInfo ulTitle={t("titles")}  footerInfo={characterInfo?.titles} />
-
                                    {/* si queremos que no se muestre ni el título ni el contenido en caso de que no haya información */}
     {/* {houseInfo[0] &&   <GalleryFooterInfo ulTitle={"Casa"}  imgInfo={true}  />}
     { characterInfo?.alliances.lenght > 0 &&  <GalleryFooterInfo ulTitle={"Aliances"} footerInfo={characterInfo?.alliances} />}

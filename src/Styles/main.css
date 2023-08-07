@@ -18,7 +18,7 @@ a {
 
 .app {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 3vw;
 }
 
 .home {
@@ -42,6 +42,10 @@ a {
   background-color: black;
   height: 100vh;
   overflow: hidden;
+}
+
+.scroll-bar {
+  height: 70vh;
 }
 
 .chronology {
@@ -77,11 +81,22 @@ a {
   background-color: transparent;
 }
 
+.active {
+  scale: 1.2;
+  transition: 0.3s ease-in-out;
+  font-weight: 900;
+}
+
 .nav {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  margin: 19px 156px;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  text-align: center;
+  align-items: center;
+  margin: 0px auto;
+}
+.nav-sect {
+  display: flex;
 }
 .nav-link-img {
   width: calc(30px + 1vw);
@@ -93,14 +108,10 @@ a {
   gap: 15px;
   padding: 19px 10vw;
   justify-content: space-evenly;
-  overflow: auto;
   max-height: 70vh;
 }
 .charactersList-input {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  margin: 25px 10vw;
   width: 30vw;
   background-color: black;
   border: none;

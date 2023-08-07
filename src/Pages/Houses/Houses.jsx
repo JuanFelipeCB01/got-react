@@ -25,6 +25,7 @@ export default function Houses() {
             <img className="housesGallery-box-image" src={`http://localhost:3005${house.image}`} alt={house.name}/>
           </Link>
           <h3>{house.name}</h3>
+
           </div>
         ))
       }

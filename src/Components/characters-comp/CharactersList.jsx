@@ -1,11 +1,10 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
+import { MyContext } from '../../shared/MyContext';
 export default function CharactersList() {
 const [characters, setCharacters] = useState([])
-  const [search, setSearch] = useState("");
+  const { search, setSearch } = useContext(MyContext);
 
 const getCharacters = async ()=> {
   try {
@@ -21,8 +20,6 @@ useEffect(()=>{
 },[])
   return (
     <div className="charactersList">
-    <input  placeholder='buscar...' className="charactersList-input"  type="text" value={search} onChange={(ev) => setSearch(ev.target.value)}/>
-    {/* <SimpleBar className='simpleBar'> */}
       {characters
         .filter((char) =>char.name.toLowerCase().includes(search.toLowerCase()))
           .map((char, index) => (
@@ -33,7 +30,6 @@ useEffect(()=>{
               </div>
             </div>
         ))}
-        {/* </SimpleBar> */}
     </div>
   );
 }

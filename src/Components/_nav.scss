@@ -1,8 +1,13 @@
 .nav{
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  margin: 19px 156px;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  text-align: center;
+  align-items: center;
+  margin: 0px auto;
+  &-sect{
+    display: flex;
+  }
   &-link{
     &-img{
       width: calc(30px + 1vw);

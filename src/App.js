@@ -10,17 +10,19 @@ import {useTranslation } from 'react-i18next';
 function App() {
 const [homePage, setHomePage] = useState(false)
 const {t, i18n} = useTranslation(["translation"])
+  const [search, setSearch] = useState("");
+
 const changeLanguage = (code) => {
   i18n.changeLanguage(code);
 }
   return (
-    <MyContext.Provider value={{t, changeLanguage}}>
+    <MyContext.Provider value={{t, changeLanguage, search, setSearch}}>
     <div className="app">
       <header>
         <Nav setHomePage={setHomePage} homePage={homePage} />
       </header>
       <main >
-        <Routers />
+            <Routers />
       </main>
       <footer className="footer">
         <BottomBar setHomePage={setHomePage} />

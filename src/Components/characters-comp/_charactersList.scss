@@ -4,13 +4,9 @@
   gap: 15px;
   padding: 19px 10vw;
   justify-content: space-evenly;
-  overflow: auto;
   max-height: 70vh;
   &-input {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    margin: 25px 10vw;
     width: 30vw;
     background-color: black;
     border: none;
@@ -23,7 +19,6 @@
       height: calc(200px + 1vw);
       overflow: hidden;
       text-align: center;
-
       &-h3 {
         font-size: 0.9rem;
         position: absolute;
