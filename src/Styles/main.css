@@ -41,6 +41,7 @@ a {
 .characters {
   background-color: black;
   height: 100vh;
+  overflow: hidden;
 }
 
 .chronology {
@@ -92,6 +93,8 @@ a {
   gap: 15px;
   padding: 19px 156px;
   justify-content: space-evenly;
+  overflow: auto;
+  max-height: 70vh;
 }
 .charactersList-input {
   position: absolute;

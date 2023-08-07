@@ -1,7 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 export default function CharactersList() {
 const [characters, setCharacters] = useState([])
   const [search, setSearch] = useState("");
@@ -21,6 +22,7 @@ useEffect(()=>{
   return (
     <div className="charactersList">
     <input  placeholder='buscar...' className="charactersList-input"  type="text" value={search} onChange={(ev) => setSearch(ev.target.value)}/>
+    {/* <SimpleBar style={{ maxHeight: 400 }}> */}
       {characters
         .filter((char) =>char.name.toLowerCase().includes(search.toLowerCase()))
           .map((char, index) => (
@@ -31,6 +33,7 @@ useEffect(()=>{
               </div>
             </div>
         ))}
+        {/* </SimpleBar> */}
     </div>
   );
 }
