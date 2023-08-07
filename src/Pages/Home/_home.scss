@@ -1,0 +1,16 @@
+.home{
+  background-image: url("https://res.cloudinary.com/dxnzcewsy/image/upload/v1691233098/portfolio/throne_nbfkbu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-top: -100px;
+  &-h1{
+    font-family: 'Game Of Thrones', sans-serif;
+    font-size: 176px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+}

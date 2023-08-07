@@ -1,13 +1,18 @@
-import { Route } from "react-router-dom"
-import {Routes as RoutesDom} from "react-router-dom"
-import { Characters, Chronology, Home, Houses } from "../Pages"
+import { Route, Routes } from "react-router-dom";
 
+import { Characters, Chronology, Home, Houses } from "../Pages";
+import { CharactersDetail} from "../Components";
+import HouseDetails from "../Components/house-details/HouseDetails";
 
-export default function Routes(){
-    return <RoutesDom>
-                <Route path="/" element={<Home/>} Route/>
-                <Route path="/characters" element={<Characters/>} Route/>
-                <Route path="/houses" element={<Houses/>} Route/>
-                <Route path="/chronology" element={<Chronology/>} Route/>
-            </RoutesDom>
+export default function Routers() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/characters" element={<Characters />} />
+      <Route path="/characters/:id" element={<CharactersDetail/>} />
+      <Route path="/houses" element={<Houses/>} />
+      <Route path="/houses/:id" element={<HouseDetails/>} />
+      <Route path="/chronology" element={<Chronology/>} />
+    </Routes>
+  );
 }

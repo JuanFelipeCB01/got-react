@@ -1,21 +1,24 @@
-import { Router } from 'react-router-dom';
 import './Styles/main.css'
-import Routes from './Routes/Routes';
 import BottomBar from './Components/BottomBar';
-import React from 'react';
+import React, { useState } from 'react';
+import Routers from './Routes/Routes';
+import Nav from './Components/Nav';
 
 function App() {
+const [homePage, setHomePage] = useState(false)
+
   return (
-    <Router>
-      <div className="App">
-        <main>
-          <Routes/>
-        </main>
-        <footer>
-          <BottomBar/>
-        </footer>
-      </div>
-    </Router>
+    <div className="app">
+      <header>
+        <Nav setHomePage={setHomePage} homePage={homePage} />
+      </header>
+      <main >
+        <Routers />
+      </main>
+      <footer className="footer">
+        <BottomBar setHomePage={setHomePage} />
+      </footer>
+    </div>
   );
 }
 

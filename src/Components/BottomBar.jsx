@@ -1,13 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export default function BottomBar() {
+export default function BottomBar({setHomePage}) {
   return (
-    <div>
+    <div className='footer-bottom'>
         <nav className='footer-bottom-bar'>
-            <NavLink to ="/characters">characters</NavLink>
-            <NavLink to ="/houses">houses</NavLink>
-            <NavLink to ="/chronology">chronology</NavLink>
+            <NavLink  to ="/characters" onClick={()=>setHomePage(true)} >CHARACTERS</NavLink>
+            <NavLink to ="/houses" onClick={()=>setHomePage(true)}>HOUSES</NavLink>
+            <NavLink to ="/chronology" onClick={()=>setHomePage(true)}>CHRONOLOGY</NavLink>
         </nav>
     </div>
   )

@@ -1,0 +1,11 @@
+.nav{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin: 19px 156px;
+  &-link{
+    &-img{
+      width: calc(30px + 1vw);
+    }
+  }
+}
