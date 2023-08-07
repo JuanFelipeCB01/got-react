@@ -6,17 +6,17 @@ import GalleryDetail from "../gallery-detail/GalleryDetail";
 export const ImgContext = React.createContext();
 
 export default function CharactersDetail() {
-  const { id } = useParams();
+  const  {name}  = useParams();
   const [charactersData, setCharactersData] = useState();
   const [houses, setHouses] = useState([]);
-
+  console.log(charactersData)
   const getCharacterDetail = async () => {
     try {
-      const characterDetail = await axios.get(`http://localhost:3005/characters/${id}`);
-      setCharactersData(characterDetail.data);
-
-      if (characterDetail.data.house) {
-        const houseList = await axios.get(`http://localhost:3005/houses?name=${characterDetail.data.house}`);
+      const characterDetail = await axios.get(`http://localhost:3005/characters?name=${name}`);
+      setCharactersData(characterDetail.data[0]);
+      if (characterDetail.data[0].house) {
+        console.log(characterDetail.data[0].house);
+        const houseList = await axios.get(`http://localhost:3005/houses?name=${characterDetail.data[0].house}`);
         setHouses(houseList.data);
       }
     } catch (error) {
@@ -29,7 +29,7 @@ export default function CharactersDetail() {
   return (
     <ImgContext.Provider value={{houses}}>
     <div>
-      <GalleryDetail characterInfo={charactersData}   />
+      <GalleryDetail characterInfo={charactersData}  houseInfo={houses} />
     </div>
     </ImgContext.Provider>
   );

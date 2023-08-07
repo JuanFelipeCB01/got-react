@@ -9,9 +9,9 @@ export default function Routers() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/characters" element={<Characters />} />
-      <Route path="/characters/:id" element={<CharactersDetail/>} />
+      <Route path="/characters/:name" element={<CharactersDetail/>} />
       <Route path="/houses" element={<Houses/>} />
-      <Route path="/houses/:id" element={<HouseDetails/>} />
+      <Route path="/houses/:name" element={<HouseDetails/>} />
       <Route path="/chronology" element={<Chronology/>} />
     </Routes>
   );
