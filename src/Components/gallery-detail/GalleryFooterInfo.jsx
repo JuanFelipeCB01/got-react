@@ -3,7 +3,6 @@ import { ImgContext } from '../characters-detail-comp/CharactersDetail';
 
 export default function GalleryFooterInfo({footerInfo, ulTitle, imgInfo}) {
   const { houses } = useContext(ImgContext);
-  // console.log(houses)
   return (
     <div className="galleryFooterInfo">
       <ul className="galleryFooterInfo-ul">
