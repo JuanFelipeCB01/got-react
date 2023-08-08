@@ -2,13 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  padding: 19px 10vw;
-  justify-content: space-evenly;
+  padding: 19px 2vw;
+  justify-content: space-between;
   max-height: 70vh;
   &-input {
     position: absolute;
-    width: 30vw;
-    left: 200px;
+    width: 20vw;
+    left: 12vw;
     background-color: transparent;
     border: none;
     border-bottom: 1px white solid;

@@ -19,13 +19,30 @@ a {
 .app {
   margin: auto;
   margin-top: 3vw;
+  width: 80vw;
+}
+
+.simplebar-track.simplebar-vertical {
+  background-image: linear-gradient(orange, white, orange);
+}
+
+.audio-control {
+  opacity: 0.1;
+  transition: 0.3s ease-in-out;
+}
+
+.audio-control:hover {
+  opacity: 0.4;
 }
 
 .home {
   background-image: url("https://res.cloudinary.com/dxnzcewsy/image/upload/v1691233098/portfolio/throne_nbfkbu.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0;
+  width: 100vw;
   height: 100vh;
+  margin-left: -190px;
   margin-top: -100px;
 }
 .home-h1 {
@@ -49,11 +66,74 @@ a {
 }
 
 .chronology {
+  text-align: center;
+  color: black;
+  width: 30%;
+  margin: auto;
+}
+.chronology-panel {
   background-color: black;
   height: 100vh;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.chronology .sort-btn {
-  color: black;
+.chronology-panel-itemOdd {
+  font-size: 10px;
+  height: 350px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chronology-panel-itemEven {
+  font-size: 10px;
+  margin-top: 160px;
+  border-top: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chronology-panel h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+.chronology-btn {
+  color: white;
+  background-color: transparent;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  margin: auto;
+  margin-bottom: -3px;
+}
+.chronology .image-container {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.chronology .image-container-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.chronology-line {
+  border: 1px white solid;
+  width: 1px;
+  margin: -6px 50%;
+  height: 20px;
+}
+
+.fa-solid {
+  font-size: 20px;
+  margin-left: 2px;
 }
 
 .housesGallery {
@@ -82,6 +162,7 @@ a {
   bottom: 4rem;
   width: 80%;
   background-color: transparent;
+  font-size: calc(16px + 0.5vw);
 }
 
 .active {
@@ -112,14 +193,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  padding: 19px 10vw;
-  justify-content: space-evenly;
+  padding: 19px 2vw;
+  justify-content: space-between;
   max-height: 70vh;
 }
 .charactersList-input {
   position: absolute;
-  width: 30vw;
-  left: 200px;
+  width: 20vw;
+  left: 12vw;
   background-color: transparent;
   border: none;
   border-bottom: 1px white solid;

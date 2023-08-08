@@ -17,4 +17,16 @@ a{
 .app{
     margin: auto;
     margin-top: 3vw;
+  width: 80vw;
+
+}
+.simplebar-track.simplebar-vertical {
+    background-image: linear-gradient(orange, white, orange);;
+}
+.audio-control{
+    opacity: 0.1;
+    transition: 0.3s ease-in-out;
+}
+.audio-control:hover{
+opacity: 0.4;
 }

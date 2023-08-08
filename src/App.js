@@ -16,12 +16,16 @@ const {t, i18n} = useTranslation(["translation"])
 const changeLanguage = (code) => {
   i18n.changeLanguage(code);
 }
+
   return (
-    <MyContext.Provider value={{t, changeLanguage, search, setSearch}}>
+    <MyContext.Provider value={{t, changeLanguage, search, setSearch, setCharacterPage}}>
+
     <div className="app">
       <header>
-        <Nav setHomePage={setHomePage} homePage={homePage}  characterPage={characterPage}/>
+        <Nav setHomePage={setHomePage} setCharacterPage={setCharacterPage} homePage={homePage}  characterPage={characterPage}/>
       </header>
+      {/* lo encontraste XD  pon controls tal cual dentro de las movidas de audio y podrás manejarlo */}
+      <audio  className='audio-control'  autoPlay="true" src="got.mp3"></audio>
       <main >
             <Routers />
       </main>
@@ -29,6 +33,7 @@ const changeLanguage = (code) => {
         <BottomBar setHomePage={setHomePage} setCharacterPage={setCharacterPage}/>
       </footer>
     </div>
+    
     </MyContext.Provider>
   );
 }
