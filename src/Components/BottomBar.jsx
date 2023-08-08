@@ -10,6 +10,7 @@ export default function BottomBar({setHomePage,setCharacterPage}) {
             <NavLink activeClassName="active"  to ="/characters" onClick={()=>(setHomePage(true), setCharacterPage(true))} >{t("characters")}</NavLink>
             <NavLink activeClassName="active" to ="/houses" onClick={()=>(setHomePage(true), setCharacterPage(false))}>{t("houses")}</NavLink>
             <NavLink activeClassName="active" to ="/chronology" onClick={()=>(setHomePage(true), setCharacterPage(false))}>{t("chronology")}</NavLink>
+
         </nav>
     </div>
   )
