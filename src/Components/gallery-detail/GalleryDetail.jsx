@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { MyContext } from "../../shared/MyContext";
 
 export default function GalleryDetail({ characterInfo, houseInfo }) {
-  const { t } = useContext(MyContext);
+  const { t, setCharacterPage } = useContext(MyContext);
   const unknown = [t("unknown")];
   return (
     <div className="galleryDetail">
       <div className="galleryDetail-goBack">
-        <Link to="/characters">{"<--- Volver"} </Link>
+        <Link onClick={()=>setCharacterPage(true)} to="/characters"><i className="fa-solid fa-arrow-left-long"></i>Volver</Link>
       </div>
       <div className="galleryDetail-div">
         <img className="galleryDetail-div-img" src={`http://localhost:3005${characterInfo?.image}`} alt=""/>
