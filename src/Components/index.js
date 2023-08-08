@@ -5,3 +5,4 @@ export { default as GalleryFooterInfo } from "./gallery-detail/GalleryFooterInfo
 export { default as Houses } from "./houses-comp/Houses";
 export { default as HousesGallery } from "./houses-comp/HousesGallery";
 export { default as Searchbar } from "./characters-comp/Searchbar";
+export { default as Loader } from "../shared/Loader";

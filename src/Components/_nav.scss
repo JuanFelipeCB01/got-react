@@ -1,14 +1,15 @@
 .nav{
-  display: flex;
   justify-content: space-between;
-  width: 80vw;
   text-align: center;
   align-items: center;
-  margin: 0px auto;
+  margin: 30px auto;
   &-sect{
+    position: absolute;
     display: flex;
+    right: 150px;
   }
   &-link{
+    left: 150px;
     &-img{
       width: calc(30px + 1vw);
     }

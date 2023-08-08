@@ -3,12 +3,12 @@ import { NavLink} from 'react-router-dom'
 import { MyContext } from '../shared/MyContext';
 import Searchbar from './characters-comp/Searchbar';
 
-export default function Nav({setHomePage, homePage}) {
+export default function Nav({setHomePage, homePage, characterPage}) {
   const {changeLanguage} = useContext(MyContext)
 
   return (
     <div className='nav'>
-    <Searchbar/>
+    {characterPage &&<Searchbar/>}
     <section className='nav-sect'>
     {homePage &&
       <NavLink className="nav-link" to="/" onClick={()=>setHomePage(false)}> 

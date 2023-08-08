@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 export default function Houses() {
   const [housesList, setHousesList] = useState([]);
 
@@ -17,18 +18,21 @@ export default function Houses() {
     getHouses();
   }, []);
   return (
-    <div className="housesGallery">
-      {
-        housesList.map((house, index) => (
+    <SimpleBar className="scroll-bar">
+      <div className="housesGallery">
+        {housesList.map((house, index) => (
           <div className="housesGallery-box" key={index}>
-          <Link to={`/houses/${house.name}`}>
-            <img className="housesGallery-box-image" src={`http://localhost:3005${house.image}`} alt={house.name}/>
-          </Link>
-          <h3>{house.name}</h3>
-
+            <Link to={`/houses/${house.name}`}>
+              <img
+                className="housesGallery-box-image"
+                src={`http://localhost:3005${house.image}`}
+                alt={house.name}
+              />
+            </Link>
+            <h3>{house.name}</h3>
           </div>
-        ))
-      }
-    </div>
+        ))}
+      </div>
+    </SimpleBar>
   );
 }
