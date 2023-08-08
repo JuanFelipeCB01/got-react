@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { MyContext } from "../../shared/MyContext";
 
 export default function GalleryDetail({ characterInfo, houseInfo }) {
-  const { t, changeLanguage } = useContext(MyContext);
+  const { t } = useContext(MyContext);
   const unknown = [t("unknown")];
   return (
     <div className="galleryDetail">
@@ -18,12 +18,13 @@ export default function GalleryDetail({ characterInfo, houseInfo }) {
       <section className="galleryDetail-section">
 
       {/* no muestra  Casa si no tiene y pone unknown si no se conocen padres o hermanos*/}
-     {houseInfo[0] &&   <GalleryFooterInfo ulTitle={t("houses")}  imgInfo={true}  />}
+        {houseInfo[0] &&   <GalleryFooterInfo ulTitle={t("houses")}  imgInfo={true}  />}
         <GalleryFooterInfo ulTitle={t("aliances")}  footerInfo={characterInfo?.alliances} />
         <GalleryFooterInfo ulTitle={t("episodes")}  footerInfo={characterInfo?.episodes} />
-        {characterInfo?.parents.length >0 ? <GalleryFooterInfo ulTitle={t("father")} footerInfo={characterInfo?.parents} /> : <GalleryFooterInfo ulTitle={t("father")} footerInfo={unknown}/>}
-        {characterInfo?.siblings.length >0 ? <GalleryFooterInfo ulTitle={t("siblings")}  footerInfo={characterInfo?.siblings} /> : <GalleryFooterInfo ulTitle={t("siblings")} footerInfo={unknown}/>}
+        {characterInfo?.parents.length > 0 ? <GalleryFooterInfo ulTitle={t("father")} footerInfo={characterInfo?.parents} /> : <GalleryFooterInfo ulTitle={t("father")} footerInfo={unknown}/>}
+        {characterInfo?.siblings.length > 0 ? <GalleryFooterInfo ulTitle={t("siblings")}  footerInfo={characterInfo?.siblings} /> : <GalleryFooterInfo ulTitle={t("siblings")} footerInfo={unknown}/>}
         <GalleryFooterInfo ulTitle={t("titles")}  footerInfo={characterInfo?.titles} />
+
                                    {/* si queremos que no se muestre ni el título ni el contenido en caso de que no haya información */}
     {/* {houseInfo[0] &&   <GalleryFooterInfo ulTitle={"Casa"}  imgInfo={true}  />}
     { characterInfo?.alliances.lenght > 0 &&  <GalleryFooterInfo ulTitle={"Aliances"} footerInfo={characterInfo?.alliances} />}
