@@ -23,7 +23,7 @@ useEffect(() => {
 }, []);
 return (
     <div>
-      <HGalleryDetails houseInfo={housesData}   />
+      <HGalleryDetails houseInfo={housesData}/>
     </div>
 )
 }

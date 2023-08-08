@@ -52,6 +52,9 @@ a {
   background-color: black;
   height: 100vh;
 }
+.chronology .sort-btn {
+  color: black;
+}
 
 .housesGallery {
   background-color: black;
