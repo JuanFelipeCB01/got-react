@@ -171,7 +171,9 @@ a {
   scale: 1.2;
   transition: 0.3s ease-in-out;
   font-weight: 900;
+  border-bottom: 2px solid white;
 }
+
 
 .nav {
   justify-content: space-between;

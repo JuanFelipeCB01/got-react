@@ -28,7 +28,7 @@ const changeLanguage = (code) => {
       <main >
             <Routers />
       </main>
-      <audio  className='audio-control' controls autoPlay="true" src="got.mp3"></audio>
+      {/* <audio  className='audio-control' controls autoPlay="true" src="got.mp3"></audio> */}
       <footer className="footer">
         <BottomBar setHomePage={setHomePage} setCharacterPage={setCharacterPage}/>
       </footer>

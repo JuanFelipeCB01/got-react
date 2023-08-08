@@ -21,12 +21,9 @@ const getTimelineData = async () => {
   useEffect(()=>{
   getTimelineData();
   }, []);
-  setTimeout(() => {
-    console.log("pepe", timelineR)
-  }, 2000);
+
   return (
     <SimpleBar className="scroll-bar">
-
     <div className='chronology'>
       {timelineR && 
         <button className='chronology-btn' onClick={() => setSorted(!sorted)}> {sorted ? timelineR[0].age : timelineRI[0].age} </button>
@@ -37,10 +34,10 @@ const getTimelineData = async () => {
       <div className='chronology-line'></div>
       <div className='chronology-panel'>
         {(sorted ? timelineR : timelineRI)?.map((item, index) => (
-          <div key={index} className={index % 2===0 ? 'chronology-panel-itemEven':"chronology-panel-itemOdd"} >
+          <div   key={index} className={index % 2===0 ? 'chronology-panel-itemEven':"chronology-panel-itemOdd"} >
             <h6 className='chronology-panel-age'>{item.age}</h6>
             <h6 className='chronology-panel-age'>{item.name}</h6>
-            <div className='image-container'>
+            <div  className='image-container'>
               <img className='image-container-image' src={`http://localhost:3005${item.image}`} alt={item.name}/>
             </div>
           </div>
