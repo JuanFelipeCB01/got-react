@@ -82,17 +82,16 @@ a {
 }
 .chronology-panel-itemOdd {
   font-size: 10px;
-  height: 350px;
+  margin-top: 160px;
   border-top: 2px solid white;
-  border-left: 2px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .chronology-panel-itemEven {
   font-size: 10px;
-  margin-top: 160px;
   border-top: 2px solid white;
+  border-right: 2px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,13 +128,14 @@ a {
 .chronology-line {
   border: 1px white solid;
   width: 1px;
-  margin: -6px 50%;
+  margin: -6px 49.5%;
+  margin-right: 10px;
   height: 20px;
 }
 
 .fa-solid {
   font-size: 20px;
-  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .housesGallery {
@@ -173,7 +173,6 @@ a {
   font-weight: 900;
   border-bottom: 2px solid white;
 }
-
 
 .nav {
   justify-content: space-between;
