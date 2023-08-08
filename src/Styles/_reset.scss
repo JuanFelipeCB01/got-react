@@ -26,6 +26,7 @@ a{
 .audio-control{
     opacity: 0.1;
     transition: 0.3s ease-in-out;
+    position: absolute;
 }
 .audio-control:hover{
 opacity: 0.4;
