@@ -8,8 +8,15 @@
   bottom: 4rem;
   width: 80%;
   background-color: transparent;
-  font-size: calc(16px + 0.5vw);
-
+  font-size: calc(10px + 0.8vw);
+   &-link{
+    transition: 0.3s ease-in-out;
+    &:hover{
+      text-shadow: 2px 2px rgba(255, 0, 0, 0.477);
+      letter-spacing: 1px;
+      color: white;
+    }
+   }
 }
 }
 .active{

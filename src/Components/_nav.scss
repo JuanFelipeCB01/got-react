@@ -1,17 +1,16 @@
 .nav{
-  justify-content: space-between;
   text-align: center;
   align-items: center;
   margin: 30px auto;
   &-sect{
     position: absolute;
     display: flex;
-    right: 150px;
+    right: 10vw;
   }
   &-link{
-    left: 150px;
+    border-bottom: transparent;
     &-img{
-      width: calc(30px + 1vw);
+      width: calc(24px + 0.6vw);
     }
   }
 }

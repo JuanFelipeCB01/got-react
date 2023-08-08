@@ -10,6 +10,8 @@ import {useTranslation } from 'react-i18next';
 function App() {
 const [homePage, setHomePage] = useState(false)
 const [characterPage, setCharacterPage] = useState(false)
+const [bottomBarShow, setBottomBarShow] = useState(true)
+
 const {t, i18n} = useTranslation(["translation"])
   const [search, setSearch] = useState("");
 
@@ -18,17 +20,16 @@ const changeLanguage = (code) => {
 }
 
   return (
-    <MyContext.Provider value={{t, changeLanguage, search, setSearch, setCharacterPage}}>
+    <MyContext.Provider value={{t, changeLanguage, search, setSearch, setCharacterPage, setBottomBarShow, bottomBarShow}}>
 
     <div className="app">
-    {/* creo que los navegadores no dejan que haya un autoplay */}
       <header>
         <Nav setHomePage={setHomePage} setCharacterPage={setCharacterPage} homePage={homePage}  characterPage={characterPage}/>
       </header>
       <main >
             <Routers />
       </main>
-      {/* <audio  className='audio-control' controls autoPlay="true" src="got.mp3"></audio> */}
+      <audio  className='audio-control' controls autoPlay="true" src="got.mp3"></audio>
       <footer className="footer">
         <BottomBar setHomePage={setHomePage} setCharacterPage={setCharacterPage}/>
       </footer>

@@ -1,15 +1,19 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import GalleryFooterInfo from "./GalleryFooterInfo";
 import { Link } from "react-router-dom";
 import { MyContext } from "../../shared/MyContext";
 
 export default function GalleryDetail({ characterInfo, houseInfo }) {
-  const { t, setCharacterPage } = useContext(MyContext);
+  const { t, setCharacterPage, setBottomBarShow } = useContext(MyContext);
   const unknown = [t("unknown")];
+
+    useEffect(() => {
+      setBottomBarShow(false);
+    }, []);
   return (
     <div className="galleryDetail">
       <div className="galleryDetail-goBack">
-        <Link onClick={()=>setCharacterPage(true)} to="/characters"><i className="fa-solid fa-arrow-left-long"></i>Volver</Link>
+        <Link onClick={()=>(setCharacterPage(true), setBottomBarShow(true))} to="/characters"><i className="fa-solid fa-arrow-left-long"></i>Volver</Link>
       </div>
       <div className="galleryDetail-div">
         <img className="galleryDetail-div-img" src={`http://localhost:3005${characterInfo?.image}`} alt=""/>

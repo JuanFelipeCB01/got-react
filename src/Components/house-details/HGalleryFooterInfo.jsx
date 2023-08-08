@@ -6,7 +6,7 @@ export default function HGalleryFooterInfo({footerInfo, ulTitle}) {
     <div className="galleryFooterInfo">
       <ul className="galleryFooterInfo-ul">
         <h4 className="galleryFooterInfo-ul-h3">{ulTitle}</h4>
-        <SimpleBar style={{ height: 200, borderBottom: "2px solid white", scrollbarColor: "blue",}}>
+        <SimpleBar className="scroll-bar-house" >
           <li>{footerInfo}</li>
         </SimpleBar>
       </ul>

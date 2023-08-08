@@ -1,11 +1,13 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import GalleryDetail from "../gallery-detail/GalleryDetail";
+import { MyContext } from "../../shared/MyContext";
 
 export const ImgContext = React.createContext();
 
 export default function CharactersDetail() {
+  
   const  {name}  = useParams();
   const [charactersData, setCharactersData] = useState();
   const [houses, setHouses] = useState([]);
@@ -21,6 +23,7 @@ export default function CharactersDetail() {
       console.error("Error fetching character details:", error);
     }
   };
+  
   useEffect(() => {
     getCharacterDetail();
   }, []);
