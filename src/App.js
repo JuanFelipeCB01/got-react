@@ -21,14 +21,14 @@ const changeLanguage = (code) => {
     <MyContext.Provider value={{t, changeLanguage, search, setSearch, setCharacterPage}}>
 
     <div className="app">
+    {/* creo que los navegadores no dejan que haya un autoplay */}
       <header>
         <Nav setHomePage={setHomePage} setCharacterPage={setCharacterPage} homePage={homePage}  characterPage={characterPage}/>
       </header>
-      {/* lo encontraste XD  pon controls tal cual dentro de las movidas de audio y podrás manejarlo */}
-      <audio  className='audio-control'  autoPlay="true" src="got.mp3"></audio>
       <main >
             <Routers />
       </main>
+      <audio  className='audio-control' controls autoPlay="true" src="got.mp3"></audio>
       <footer className="footer">
         <BottomBar setHomePage={setHomePage} setCharacterPage={setCharacterPage}/>
       </footer>

@@ -9,7 +9,7 @@
   margin-top: -100px;
   &-h1{
     font-family: 'Game Of Thrones', sans-serif;
-    font-size: 176px;
+    font-size: calc(30px + 8vw);
     display: flex;
     justify-content: center;
     align-items: center;
